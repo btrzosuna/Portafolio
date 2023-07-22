@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+
+button {
+    background-color: #E716D2;
+    border-radius: 40px;
+    font: normal 30px 'Crimson Pro', serif;
+}
+
+a:hover {
+    color: #E716D2 !important;
+
+}
+
+h1 {
+    color: #ffffff;
+    ;
+    font: normal 60px 'Crimson Pro', serif;
+    /*  height: 140px; */
+    left: 0;
+    letter-spacing: 5px;
+    /*  margin: -80px 0 0 0; */
+    /* position: absolute; */
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    width: 100%;
+    animation: move linear 2000ms infinite;
+}
+
+@keyframes move {
+    0% {
+        text-shadow:
+            4px -4px 0 #E716D2,
+            3px -3px 0 #E716D2,
+            2px -2px 0 #E716D2,
+            1px -1px 0 #E716D2,
+            -4px 4px 0 hsla(180, 100%, 50%, 1),
+            -3px 3px 0 hsla(180, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1),
+            -1px 1px 0 hsla(180, 100%, 50%, 1);
+    }
+
+    25% {
+        text-shadow:
+            -4px -4px 0 #E716D2,
+            -3px -3px 0 #E716D2,
+            -2px -2px 0 #E716D2,
+            -1px -1px 0 #E716D2,
+            4px 4px 0 rgb(255, 255, 255),
+            3px 3px 0 rgb(255, 255, 255),
+            2px 2px 0 rgb(255, 255, 255),
+            1px 1px 0 rgb(255, 255, 255);
+    }
+
+    50% {
+        text-shadow:
+            -4px 4px 0 #E716D2,
+            -3px 3px 0 #E716D2,
+            -2px 2px 0 #E716D2,
+            -1px 1px 0 #E716D2,
+            4px -4px 0 hsla(180, 100%, 50%, 1),
+            3px -3px 0 hsla(180, 100%, 50%, 1),
+            2px -2px 0 hsla(180, 100%, 50%, 1),
+            1px -1px 0 hsla(180, 100%, 50%, 1);
+    }
+
+    75% {
+        text-shadow:
+            4px 4px 0 hsla(180, 100%, 50%, 1),
+            3px 3px 0 hsla(180, 100%, 50%, 1),
+            2px 2px 0 hsla(180, 100%, 50%, 1),
+            1px 1px 0 hsla(180, 100%, 50%, 1),
+            -4px -4px 0 #E716D2,
+            -3px -3px 0 #E716D2,
+            -2px -2px 0 #E716D2,
+            -1px -1px 0 #E716D2,
+        ;
+    }
+
+    100% {
+        text-shadow:
+            4px -4px 0 #E716D2,
+            3px -3px 0 #E716D2,
+            2px -2px 0 #E716D2,
+            1px -1px 0 #E716D2,
+            -4px 4px 0 hsla(180, 100%, 50%, 1),
+            -3px 3px 0 hsla(180, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1),
+            -1px 1px 0 hsla(180, 100%, 50%, 1);
+    }
+}
+
+.layout {
+    width: 100%;
+    height: 100vh;
+    /* Medida que determina el ancho de mi ventana */
+
+    background-color: #000000;
+    display: grid;
+    grid:
+        "nombre navegador" 1fr / auto 1fr;
+    gap: 40px;
+    place-items: center;
+    font-family: 'Crimson Pro', serif;
+    color: #ffffff;
+    font-size: 40px;
+    /* padding: 30px; */
+
+}
+
+/* .nav {
+    grid-area: nombre;
+    
+    } */
+.nombre {
+  
+    text-align: center;
+
+
+}
+
+.navegador {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #151414;
+    padding: 100px;
+    row-gap: 80px;
+}
+
+.layoutAcercade {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid:
+        "header" auto "main" 1fr "footer" auto / 1fr;
+    gap: 8px;
+    font-family: 'Crimson Pro', serif;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.header {
+    grid-area: header;
+    background-color: #151414;
+    font-size: 30px;
+   
+}
+
+.main {
+    grid-area: main;
+    height: 100%;
+}
+
+.footer {
+    grid-area: footer;
+}
+.container-figura1{
+    border-color: #E716D2;
+    border-radius: 20px;
+}
+.figura2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.iconos {
+    width: 1366px;
+    height: 768px;
+  
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    
+    flex-wrap: wrap;
+  }
+  .navbar{
+    padding: 10px;
+    display: flex;
+  
+  }
+ .navbar-nav{
+    justify-content: space-evenly;
+ }
+ .collapse .navbar-collapse{
+ justify-content: space-evenly;
+    
+ }
+ .container-form{
+    font: normal 30px 'Crimson Pro', serif;
+ }
+
+ .form-control {
+
+    background-color: #ffffff;
+ }
+ .form-text{
+    color: #ffffff;
+ }
+ .btn{
+background-color: #E716D2;
+ }
+ .contenedor{
+    padding: 300px;
+ }
+ .card-body{
+    background-color: #000000;
+    color: white
+ }
+ .card{
+    display: flex;
+    flex-wrap: wrap;
+ }
+ p{
+    font-size: 30px;
+   margin: 50px;
+   
+ }
