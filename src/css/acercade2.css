@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+
+* {
+    font: normal 30px 'Crimson Pro', serif;
+}
+
+.navbar {
+    background-color: #292D32;
+    padding: 0;
+    
+}
+/* No se porque el color de el primer link del menu se queda negro */
+.navbar-nav .nav-link {
+    color: #ffffff;
+    
+}
+
+/* Aqui quiero cambiar el color de la hamburgesa y se cambia solo el borde */
+.navbar-toggler{
+    color: white;
+}
+
+.navbar a:hover{
+    color:#E716D2;
+    background-color: black;
+    border-radius: 50px;
+}
+/*  */
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-nav {
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+.parent {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: rgb(0, 0, 0, 0.8);
+    border-radius: 50px;
+   
+    margin-left: 20px;
+    
+    margin-top: 5%;
+}
+
+.text{
+    color: white;
+    text-align: justify;
+    margin: 20px;
+    padding: 20px;
+    
+}
+
+.foto {
+    grid-area: 1 / 2 / 2 / 3;
+}
