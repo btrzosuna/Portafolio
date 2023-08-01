@@ -1,70 +1,81 @@
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Acerca de</title>
-    <style src="./rsc/style.css" defer></style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <title>Bootstrap Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+   <!-- Este es el codigo para el navbar -->
+   <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <img src="./src/img/Logo.png" alt="" width="150" height="100"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./acercade.html">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./skills.html">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./proyectos.html">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> <!-- Aqui termina el navegador -->
 
- 
-
-  <body>
-    <section class="layoutAcercade">
-      <div class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-lg-0">
-          <div class="container-fluid">
-           
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-item nav-link " href="./index.html">Home</a>
-                <a class="nav-item nav-link " href="./acercade.html">Acerca de</a>
-          <a class="nav-item nav-link" href="./servicios.html">Servicios</a>
-          <a class="nav-item nav-link" href="./skills.html">Skills</a>
-          <a class="nav-item nav-link" href="./proyectos.html">Proyectos</a>
-          <a class="nav-item nav-link" href="./contacto.html">Contacto</a>
-                
-              </div>
-            </div>
-          </div>
-        </nav>
-        
-      </div>
-      <div class="main">
-        <h2>Contactame</h2>
-    <div class="contenedor">
-    <form class="container-form">
-      <div class="mb-3 col-md-5">
-        <label for="exampleInputEmail1" class="form-label">Nombre</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Ingresa tu nombre completo</div>
-      </div>
-      <div class="mb-3 col-md-5">
-        <label for="exampleInputPassword1" class="form-label"  >Correo Electronico</label>
-        <input type="text" class="form-control">
-      </div>
-      <div class="mb-3 col-md-5" >
-        <label for="exampleInputPassword1" class="form-label">Número de Teléfono</label>
-        <input type="text" class="form-control">
-      </div>
-      <div class="mb-4 col-md-10">
-        <label for="exampleInputPassword1" class="form-label">Mensaje</label>
-        <input type="text" class="form-control">
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+<!-- Aqui incia el codigo del formulario -->
+<div class="col-12 col-md-6 formulario" >
+  <div class="tit" id="titulo-form">
+      <h3>Contacame</h3>
   </div>
-      <div class="footer">PIE DE PÁGINA</div>
-    </section>
-
+  <div class="form1">
+  <form id="form">
+      <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nombre">
+      </div>
+      <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+          
+      </div>
+      <div class="mb-3">
+        <label for="tel" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="tel" aria-describedby="tel" name="tel">
+    </div>
+      <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea type="text" class="form-control" id="mensaje" aria-describedby="mensaje" rows="3" name="mensaje"></textarea>
+      </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./rsc/style.css" defer>
+      <button type="submit" class="enviar btn btn-primary" id="enviar">Enviar</button>
+  </form>
+  </div>
+</div>
+</div>
+</div>
+
+  <!-- Teerminan las tarjetas-->
+  <link rel="stylesheet" href="./src/css/contacto.css">
+  <script src="./src/js/main.js"></script>
 </body>
 </html>
