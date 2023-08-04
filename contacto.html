@@ -9,6 +9,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    
+
    <!-- Este es el codigo para el navbar -->
    <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
@@ -40,86 +42,50 @@
     </div>
 </nav> <!-- Aqui termina el navegador -->
 
-<!-- Aqui incia el codigo del formulario -->
-<!-- <div class="col-12 col-md-6 formulario">
-    <div class="tit" id="titulo-form">
-        <h3>Contactame</h3>
-    </div>
-    <div class="form1">
-        <form id="form">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nombre" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="tel" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="tel" aria-describedby="tel" name="tel" pattern="[0-9]{10}">
-                <small id="tel" class="form-text text-muted">Please enter a 10-digit phone number.</small>
-            </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea type="text" class="form-control" id="mensaje" aria-describedby="mensaje" rows="3" name="mensaje" required></textarea>
-            </div>
 
-            <button type="submit" class="enviar btn btn-primary" id="enviar">Enviar</button>
-        </form>
-    </div>
-</div> --> 
+
 <br>
 <h3>Contactame</h3>
 <br>
-<div class="col-12 col-md-6 formulario" >
-    <div class="tit" id="titulo-form">
-        
-    </div>
-    <div class="form1">
-    <form id="form">
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 formulario">
+        <div class="form1">
+          <form id="form">
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nombre">
+            <div class="alert-container" id="nombre-alert"></div>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Correo electrónico</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
-            
-        </div>
-        <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea type="text" class="form-control" id="mensaje" aria-describedby="mensaje" rows="3" name="mensaje"></textarea>
+            <div class="alert-container" id="email-alert"></div>
         </div>
         <div class="mb-3">
             <label for="tel" class="form-label">Teléfono</label>
             <input type="text" class="form-control" id="tel" aria-describedby="tel" name="tel">
+            <div class="alert-container" id="tel-alert"></div>
         </div>
-<!--         <div class="form-group">
-            <label for="motivo">Motivo</label>
-            <select class="form-control" id="motivo" name="motivo">
-                <option value="">-- Elige una opción --</option>
-                <option value="opcion1">Sugerencias</option>
-                <option value="opcion2">Quejas</option>
-                <option value="opcion3">Devoluciones y aclaraciones</option>
-                <option value="opcion4">Otro</option>
-            </select>
-        </div> -->
-       <!--  <div class="mb-3 form-check py-2">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
-        </div> -->
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea type="text" class="form-control" id="mensaje" aria-describedby="mensaje" rows="3" name="mensaje"></textarea>
+            <div class="alert-container" id="mensaje-alert"></div>
+        </div>
+       
         <button type="submit" class="enviar btn btn-primary" id="enviar">Enviar</button>
     </form>
-    </div>
-  </div>
 </div>
 </div>
+</div>
+</div>
+
 
 
   <!-- Teerminan las tarjetas-->
   <link rel="stylesheet" href="./src/css/contacto.css">
   <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
-  <script src="./src/main.js" defer></script>
+  
+  <script src="./src/validacionesContacto.js" defer></script>
 </body>
 </html>

@@ -45,3 +45,16 @@
   .formulario{
     margin: 30;
   }
+
+  /* Para el diseño de las alertas */
+  .alert {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    color: #cd0000;
+  }
+  .alert-warning {
+    background-color: #ffc107;
+  }
