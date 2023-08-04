@@ -3,17 +3,20 @@ const form = document.getElementById("form");
   const emailInput = document.getElementById("email");
   const telInput = document.getElementById("tel");
   const mensajeInput = document.getElementById("mensaje");
-  const nombreValue = nombreInput.value.trim();
-  const emailValue = emailInput.value.trim();
-  const mensajeValue = mensajeInput.value.trim();
+
+  const btn = document.getElementById('button');
   
+
 
   form.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the form from submitting by default
-
+    const nombreValue = nombreInput.value.trim();
+    const emailValue = emailInput.value.trim();
+    const mensajeValue = mensajeInput.value.trim();
     // Hace la validación
     let isValid = true;
 
+    
 
      //Estas son las validaciones para el nombre, que al menos haya 2 letraa
   if (nombreValue.length < 2 || !/^[a-zA-Z]+$/.test(nombreValue)) {
@@ -42,7 +45,6 @@ const form = document.getElementById("form");
       isValid = false;
     }
      
-    
     if (mensajeValue.length <= 10) {
       displayAlert("El mensaje es demaciado corto", "mensaje-alert", "alert-danger");
       isValid = false;
@@ -50,9 +52,26 @@ const form = document.getElementById("form");
 
     if (isValid) {
       // Si es valido, se envia
-      form.submit();
+      //form.submit();
+        btn.value = 'Sending...';
+     
+        const serviceID = 'service_0n60ivk';
+        const templateID = 'template_5hs8bah';
+     
+        emailjs.sendForm(serviceID, templateID, this)
+         .then(() => {
+           btn.value = 'Send Email';
+           alert('Sent!');
+         }, (err) => {
+           btn.value = 'Send Email';
+           alert(JSON.stringify(err));
+        }); 
+   
+      
     }
+    
   });
+
 
 
 
@@ -80,7 +99,7 @@ const form = document.getElementById("form");
   }
 
   function isValidEmail(email) {
+    // Regular expression to validate email format
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   }
- 

@@ -58,3 +58,57 @@
   .alert-warning {
     background-color: #ffc107;
   }
+
+  .container{
+    padding-top: 10px;
+    background-color: black;
+    border-radius: 40px;
+    padding-bottom: 10px;
+  }
+  label{
+    color: white;
+  }
+  .btn{
+    color: #000000;
+    background-color: #E716D2;
+    border-radius: 50px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .btn:hover{
+    background-color: #E716D2;
+  }
+  .formasize{
+    height: 40px;
+  }
+  .form-control-text{
+    height: 70px;
+  }
+  .container-div1{
+    background-color: #E716D2;
+   border-top-left-radius: 80px;
+   border-bottom-left-radius: 5px;
+   border-top-right-radius: 80px;
+   border-bottom-right-radius: 5px;
+   padding-bottom: 10px;
+  }
+  .container-div2{
+    background-color: #E716D2;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 10px;
+  }
+  .container-div3{
+    background-color: #E716D2;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 10px;
+  }
+  .container1{
+    background-color: white;
+    
+  }
