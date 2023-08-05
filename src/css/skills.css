@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+
+* {
+    font: normal 30px 'Crimson Pro', serif;
+}
+
+.navbar {
+    background-color: #292D32;
+    padding: 0;
+
+}
+
+/* No se porque el color de el primer link del menu se queda negro */
+.navbar-nav .nav-link {
+    color: #ffffff;
+
+}
+
+/* Aqui quiero cambiar el color de la hamburgesa y se cambia solo el borde */
+.navbar-toggler {
+    color: white;
+}
+
+.navbar a:hover {
+    color: #E716D2;
+    background-color: black;
+    border-radius: 50px;
+}
+
+/*  */
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+}
+
+/* cards */
+.body-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.card .front h3{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height:45px;
+    line-height: 45px;
+color: white;
+background-color: rgba(0, 0, 0, 0.4);
+text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: #E716D2;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px black;
+}
+
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p{
+letter-spacing: 1px;
+size: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
