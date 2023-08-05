@@ -4,12 +4,13 @@ const form = document.getElementById("form");
   const telInput = document.getElementById("tel");
   const mensajeInput = document.getElementById("mensaje");
 
-  const btn = document.getElementById('button');
+  //const btn = document.getElementById('button');
   
 
 
   form.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the form from submitting by default
+    const btn = document.getElementById('button');
     const nombreValue = nombreInput.value.trim();
     const emailValue = emailInput.value.trim();
     const mensajeValue = mensajeInput.value.trim();
@@ -53,10 +54,11 @@ const form = document.getElementById("form");
     if (isValid) {
       // Si es valido, se envia
       //form.submit();
+      console.log("Hola");
         btn.value = 'Sending...';
      
-        const serviceID = 'service_0n60ivk';
-        const templateID = 'template_5hs8bah';
+        const serviceID = 'default_service';
+        const templateID = 'template_0usy99f';
      
         emailjs.sendForm(serviceID, templateID, this)
          .then(() => {
