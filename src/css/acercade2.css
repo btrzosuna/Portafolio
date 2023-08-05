@@ -61,9 +61,25 @@
     text-align: justify;
     margin: 10px;
     padding: 10px;
+    font-size: 40px;
     
 }
+
 
 /* .foto {
     grid-area: 1 / 2 / 2 / 3;
 } */
+
+.body-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+   
+}
+/* .background-image {
+    background-image:url("./src/img/acercade.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  } */
